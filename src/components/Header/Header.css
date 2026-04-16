@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 32px 0 28px;
+}
+
+.header__logo {
+  margin-right: 24px;
+}
+
+.header__date-and-location {
+  margin: 0;
+  font: 700 20px/24px "Cabinet Grotesk";
+}
+
+.header__add-clothes-btn {
+  border: none;
+  background: transparent;
+  margin: 0 20px 0 auto;
+  font: 700 20px/24px "Cabinet Grotesk";
+  cursor: pointer;
+}
+
+.header__user-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__username {
+  font: 700 20px/24px "Cabinet Grotesk";
+  margin: 0;
+}
+
+.header__avatar {
+  width: 40px;
+  height: 40px;
+}
