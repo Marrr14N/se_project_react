@@ -10,6 +10,7 @@ import Header from "../Header/Header";
 import Main from "../Main/Main.jsx";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal.jsx";
+import MobileMenu from "../MobileMenu/MobileMenu.jsx";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi.js";
 import Footer from "../Footer/Footer";
 
@@ -22,7 +23,7 @@ function App() {
     isDay: true,
   });
 
-  const [clothingItems, setClothingItems] = useState(defaultClothingItems);
+  const [clothingItems] = useState(defaultClothingItems);
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
 
@@ -33,6 +34,10 @@ function App() {
 
   const handleAddClick = () => {
     setActiveModal("add-garment");
+  };
+
+  const handleMenuClick = () => {
+    setActiveModal("mobile-menu");
   };
 
   const closeActiveModal = () => {
@@ -51,7 +56,11 @@ function App() {
   return (
     <div className="page">
       <div className="page__content">
-        <Header handleAddClick={handleAddClick} weatherData={weatherData} />
+        <Header
+          handleAddClick={handleAddClick}
+          handleMenuClick={handleMenuClick}
+          weatherData={weatherData}
+        />
         <Main
           weatherData={weatherData}
           clothingItems={clothingItems}
@@ -121,6 +130,13 @@ function App() {
           activeModal={activeModal}
           card={selectedCard}
           onClose={closeActiveModal}
+        />
+      )}
+
+      {activeModal === "mobile-menu" && (
+        <MobileMenu
+          onClose={closeActiveModal}
+          handleAddClick={handleAddClick}
         />
       )}
     </div>

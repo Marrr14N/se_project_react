@@ -18,7 +18,7 @@ The interface is clean, responsive, and designed for a smooth user experience ac
 
 ---
 
-## ⚙️ Technical Implementation
+## Technical Implementation
 
 Built using **React functional components** and modern development tools, the project emphasizes modular structure and reusable UI patterns.
 
@@ -32,7 +32,7 @@ Key features include:
 
 ---
 
-## 🧠 Skills & Technologies
+## Skills & Technologies
 
 - React (Functional Components & Hooks)
 - JavaScript (ES6+)
@@ -69,8 +69,9 @@ Key features include:
 
 ## Figma
 
-- Link to the project on Figma
-- Link to the project on GitHub
+- Link to the project on [Figma](https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-Project--WTWR?node-id=311-433&p=f&t=fAV7lcVXdUfTZWpS-0)
+
+- Link to the project on GitHub https://github.com/Marrr14N/se_project_react
 
 ---
 

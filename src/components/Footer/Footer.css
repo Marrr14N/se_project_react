@@ -2,13 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 85px;
+  margin-top: 250px;
   padding: 0 20px 24px;
 }
 
 .footer__text,
 .footer__year {
-  margin: 0;
+  margin-top: 204px;
   font: 400 16px/20px "Cabinet Grotesk";
   color: #000000;
+}
+
+@media screen and (max-width: 627px) {
+  .footer {
+    padding: 0 0 20px;
+  }
+
+  .footer__text,
+  .footer__year {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 200px;
+  }
 }

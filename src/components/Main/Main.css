@@ -1,8 +1,28 @@
-.card__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
+.cards__text {
+  font: 700 20px/24px "Cabinet Grotesk";
+  margin: 34px 0 34px;
+}
+
+.cards__list {
+  list-style: none;
   padding: 0;
-  list-style-type: none;
-  gap: 21px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 323px);
+  gap: 20px;
+}
+
+@media screen and (max-width: 627px) {
+  .cards__text {
+    margin: 0 0 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .cards__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, calc((100% - 8px) / 2));
+    gap: 16px;
+  }
 }

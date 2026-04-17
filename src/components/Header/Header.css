@@ -36,3 +36,45 @@
   width: 40px;
   height: 40px;
 }
+
+.header__menu-btn {
+  display: none;
+  border: none;
+  margin-left: auto;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header__menu-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    row-gap: 30px;
+    padding: 18px 0 16px;
+  }
+
+  .header__logo {
+    margin-right: 0;
+  }
+
+  .header__date-and-location {
+    order: 2;
+    width: 100%;
+    margin: 0;
+    font: 700 20px/24px "Cabinet Grotesk";
+  }
+
+  .header__add-clothes-btn,
+  .header__user-container {
+    display: none;
+  }
+  .header__menu-btn {
+    display: block;
+  }
+}
