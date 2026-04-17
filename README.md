@@ -2,8 +2,6 @@
 
 WTWR (What to Wear React) is a dynamic web application that recommends clothing based on real-time weather data. Built with React and Vite, the project focuses on component-based architecture, state management, and API integration.
 
----
-
 ## User Interface & Experience
 
 The app displays the current temperature and suggests appropriate clothing items based on weather conditions (hot, warm, cold).
@@ -15,8 +13,6 @@ Users can:
 - Add new garments through a form modal
 
 The interface is clean, responsive, and designed for a smooth user experience across screen sizes.
-
----
 
 ## Technical Implementation
 
@@ -30,8 +26,6 @@ Key features include:
 - State management using React hooks (`useState`, `useEffect`)
 - Component-based file structure for scalability
 
----
-
 ## Skills & Technologies
 
 - React (Functional Components & Hooks)
@@ -42,8 +36,6 @@ Key features include:
 - Conditional Rendering
 - State Management
 - Modular Architecture
-
----
 
 ## Features
 
@@ -56,8 +48,6 @@ Key features include:
 - Conditional rendering for modals
 - Component-based architecture
 
----
-
 ## Project Structure
 
 - `components/` — App, Header, Main, Footer, ItemCard, ItemModal, ModalWithForm, WeatherCard
@@ -65,15 +55,11 @@ Key features include:
 - `assets/` — images and icons
 - `vendor/` — normalize.css and fonts
 
----
-
 ## Figma
 
 - Link to the project on [Figma](https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-Project--WTWR?node-id=311-433&p=f&t=fAV7lcVXdUfTZWpS-0)
 
 - Link to the project on [GitHub](https://github.com/Marrr14N/se_project_react)
-
----
 
 ## Project Pitch Video
 
