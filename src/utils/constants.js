@@ -75,7 +75,7 @@ export const defaultClothingItems = [
     _id: 1,
     name: "Boot",
     weather: "cold",
-    link: "/src/assets/boots.jpg",
+    url: new URL("../assets/boots.jpg", import.meta.url).href,
   },
   {
     _id: 2,

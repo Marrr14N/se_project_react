@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
-
 import "./App.css";
+import Header from "../Header/Header";
+import Main from "../Main/Main";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import ItemModal from "../ItemModal/ItemModal";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import Footer from "../Footer/Footer";
+import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import {
   coordinates,
   apiKey,
   defaultClothingItems,
-} from "../../utils/constants.js";
-import Header from "../Header/Header";
-import Main from "../Main/Main.jsx";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import ItemModal from "../ItemModal/ItemModal.jsx";
-import MobileMenu from "../MobileMenu/MobileMenu.jsx";
-import { getWeather, filterWeatherData } from "../../utils/weatherApi.js";
-import Footer from "../Footer/Footer";
+} from "../../utils/constants";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -61,19 +60,22 @@ function App() {
           handleMenuClick={handleMenuClick}
           weatherData={weatherData}
         />
+
         <Main
           weatherData={weatherData}
           clothingItems={clothingItems}
           handleCardClick={handleCardClick}
         />
+
         <Footer />
       </div>
 
       {activeModal === "add-garment" && (
         <ModalWithForm
+          name="add-garment"
           title="New garment"
           buttonText="Add garment"
-          activeModal={activeModal}
+          isOpen={activeModal === "add-garment"}
           onClose={closeActiveModal}
         >
           <label htmlFor="name" className="modal__label">
@@ -103,14 +105,15 @@ function App() {
               htmlFor="hot"
               className="modal__label modal__label_type_radio"
             >
-              <input id="hot" type="radio" className="modal__radio-input" /> Hot
+              <input id="hot" type="radio" className="modal__radio-input" />
+              Hot
             </label>
 
             <label
               htmlFor="warm"
               className="modal__label modal__label_type_radio"
             >
-              <input id="warm" type="radio" className="modal__radio-input" />{" "}
+              <input id="warm" type="radio" className="modal__radio-input" />
               Warm
             </label>
 
@@ -118,7 +121,7 @@ function App() {
               htmlFor="cold"
               className="modal__label modal__label_type_radio"
             >
-              <input id="cold" type="radio" className="modal__radio-input" />{" "}
+              <input id="cold" type="radio" className="modal__radio-input" />
               Cold
             </label>
           </fieldset>

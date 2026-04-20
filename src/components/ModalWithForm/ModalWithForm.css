@@ -42,13 +42,19 @@
   line-height: 0;
 }
 
-.modal__content_type_form .modal__close-icon {
-  filter: brightness(0) opacity(0.5);
+.modal__content_type_add-garment .modal__close-icon {
+  filter: brightness(0.5);
+}
+
+.modal__content_type_image .modal__close-icon {
+  filter: brightness(0) invert(1);
+  opacity: 1;
 }
 
 .modal__close-icon {
   width: 15px;
   height: 15px;
+  filter: brightness(0) invert(1);
 }
 
 .modal__form {
