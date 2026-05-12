@@ -1,6 +1,6 @@
-import { useForm } from "../hooks/useForm";
+import { useForm } from "../../hooks/useForm";
 
-import ModalWithForm from "../components/ModalWithForm/ModalWithForm";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
   const defaultValues = { name: "", imageUrl: "", weatherType: "" };
