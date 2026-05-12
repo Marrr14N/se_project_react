@@ -1,0 +1,29 @@
+.clothes-section {
+  flex-grow: 1;
+}
+
+.clothes-section__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px;
+}
+
+.clothes-section__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 323px);
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.clothes-section__text {
+  font: 700 20px "Cabinet Grotesk";
+}
+
+.clothes-section__btn {
+  font: 700 20px "Cabinet Grotesk";
+  color: #00000099;
+  background-color: transparent;
+  border: none;
+}

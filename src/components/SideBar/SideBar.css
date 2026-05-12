@@ -1,19 +1,38 @@
-.header {
-  display: flex;
+.sidebar__avatar {
+  height: 56px;
+  margin-left: 12px;
+  flex: 0 0 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.sidebar {
   align-items: center;
-  padding: 32px 0 28px;
 }
 
-.header__logo {
+.sidebar__profile {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 16px;
+}
+
+.sidebar__user-name {
+  font: 700 20px / 24px "Cabinet Grotesk";
+  margin: 0;
+  white-space: nowrap;
+}
+
+.sidebar__logo {
   margin-right: 24px;
 }
 
-.header__date-and-location {
+.sidebar__date-and-location {
   margin-right: auto;
   font: 700 20px/24px "Cabinet Grotesk";
 }
 
-.header__add-clothes-btn {
+.sidebar__add-clothes-btn {
   border: none;
   background: transparent;
   margin: 0 20px 0 0;
@@ -21,29 +40,13 @@
   cursor: pointer;
 }
 
-.header__user-container {
+.sidebar__user-container {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.header__user-name {
-  font: 700 20px / 24px "Cabinet Grotesk";
-  margin: 0;
-  white-space: nowrap;
-  color: black;
-}
-
-.header__avatar {
-  height: 40px;
-  margin-left: 12px;
-  flex: 0 0 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-}
-
-.header__menu-btn {
+.sidebar__menu-btn {
   display: none;
   border: none;
   margin-left: auto;
@@ -52,44 +55,35 @@
   cursor: pointer;
 }
 
-.header__menu-icon {
+.sidebar__menu-icon {
   display: block;
   width: 44px;
   height: 44px;
 }
 
-.header__nav-link {
-  color: black;
-  text-decoration: none;
-}
-
-.header__logo-link {
-  display: flex;
-}
-
 @media screen and (max-width: 627px) {
-  .header {
+  .sidebar {
     flex-wrap: wrap;
     row-gap: 30px;
     padding: 18px 0 16px;
   }
 
-  .header__logo {
+  .sidebar__logo {
     margin-right: 0;
   }
 
-  .header__date-and-location {
+  .sidebar__date-and-location {
     order: 2;
     width: 100%;
     margin: 0;
     font: 700 20px/24px "Cabinet Grotesk";
   }
 
-  .header__add-clothes-btn,
-  .header__user-container {
+  .sidebar__add-clothes-btn,
+  .sidebar__user-container {
     display: none;
   }
-  .header__menu-btn {
+  .sidebar__menu-btn {
     display: block;
   }
 }

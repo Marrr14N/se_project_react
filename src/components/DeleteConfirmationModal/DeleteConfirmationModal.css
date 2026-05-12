@@ -1,0 +1,28 @@
+.modal__content_type_confirm {
+  max-width: 670px;
+  width: 100%;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.modal__confirm-text {
+  margin: 0 0 40px;
+  font: 700 20px/24px "Cabinet Grotesk";
+}
+
+.modal__confirm-delete {
+  display: block;
+  margin: 0 auto 24px;
+  border: none;
+  background: transparent;
+  color: #ff4d00;
+  font: 700 20px/24px "Cabinet Grotesk";
+  cursor: pointer;
+}
+
+.modal__confirm-cancel {
+  border: none;
+  background: transparent;
+  font: 700 20px/24px "Cabinet Grotesk";
+  cursor: pointer;
+}

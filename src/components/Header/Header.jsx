@@ -1,7 +1,9 @@
 import "./Header.css";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import avatar from "../../assets/avatar.png";
 import menuIcon from "../../assets/menu.png";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
 function Header({ handleAddClick, handleMenuClick, weatherData }) {
   const currentDate = new Date().toLocaleString("default", {
@@ -9,13 +11,18 @@ function Header({ handleAddClick, handleMenuClick, weatherData }) {
     day: "numeric",
   });
 
+  const username = "Terrence Tegegne";
+
   return (
     <header className="header">
-      <img className="header__logo" src={logo} alt="WTWR logo" />
-
+      <NavLink className="header__logo-link" to="/">
+        <img className="header__logo" src={logo} alt="WTWR logo" />
+      </NavLink>
       <p className="header__date-and-location">
         {currentDate}, {weatherData.city}
       </p>
+
+      <ToggleSwitch />
 
       <button
         onClick={handleAddClick}
@@ -25,10 +32,19 @@ function Header({ handleAddClick, handleMenuClick, weatherData }) {
         + Add clothes
       </button>
 
-      <div className="header__user-container">
-        <p className="header__username">Terrence Tegegne</p>
-        <img src={avatar} alt="Terrence Tegegne" className="header__avatar" />
-      </div>
+      <NavLink className="header__nav-link" to="/profile">
+        <div className="header__user-container">
+          <div className="header__user-name">{username}</div>
+
+          {avatar ? (
+            <img className="header__avatar" src={avatar} alt="user avatar" />
+          ) : (
+            <span className="header__avatar">
+              {username?.toUpperCase().charAt(0) || ""}
+            </span>
+          )}
+        </div>
+      </NavLink>
 
       <button
         onClick={handleMenuClick}
