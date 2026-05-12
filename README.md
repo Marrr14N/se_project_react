@@ -28,19 +28,18 @@ Key features include:
 
 ## Skills & Technologies
 
-- React (Functional Components & Hooks)
+- React
 - JavaScript (ES6+)
-- Vite (Project setup & build tool)
-- CSS3 (BEM methodology)
-- API Integration (OpenWeather API)
-- Conditional Rendering
-- State Management
-- Modular Architecture
+- React Router
+- Vite
+- CSS (BEM Methodology)
+- OpenWeather API
+- json-server
 
 ## Features
 
 - Fetches and displays real-time weather data
-- Displays temperature in Fahrenheit
+- Displays temperature in Fahrenheit and Celcius
 - Filters clothing items by weather type
 - Modal system:
   - Item preview modal
@@ -57,10 +56,11 @@ Key features include:
 
 ## Figma
 
-- Link to the project on [Figma](https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-Project--WTWR?node-id=311-433&p=f&t=fAV7lcVXdUfTZWpS-0)
+- Link to the project on [Figma](https://www.figma.com/design/dQLJwEKasIdspciJAJrCaf/Sprint-11_-WTWR?node-id=311-433&t=pveBMNBrJtc4UQkl-0)
 
 - Link to the project on [GitHub](https://github.com/Marrr14N/se_project_react)
 
 ## Project Pitch Video
 
 This video showcases the project’s functionality while also outlining the development process and key challenges encountered during implementation.
+[this video](https://drive.google.com/file/d/19npvJcrRQWaZW4zh2n4cpqfhJa-ZgDsd/view?usp=sharing)
