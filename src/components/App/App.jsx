@@ -46,12 +46,10 @@ function App() {
       weather: inputValues.weatherType,
     };
 
-    addItem(newCardData)
-      .then((data) => {
-        setClothingItems((items) => [data, ...items]);
-        closeActiveModal();
-      })
-      .catch(console.error);
+    addItem(newCardData).then((data) => {
+      setClothingItems((items) => [data, ...items]);
+      closeActiveModal();
+    });
   };
 
   const handleDeleteItem = () => {
@@ -59,14 +57,12 @@ function App() {
   };
 
   const handleConfirmDelete = () => {
-    removeItem(selectedCard._id)
-      .then(() => {
-        setClothingItems((items) =>
-          items.filter((item) => item._id !== selectedCard._id),
-        );
-        closeActiveModal();
-      })
-      .catch(console.error);
+    removeItem(selectedCard._id).then(() => {
+      setClothingItems((items) =>
+        items.filter((item) => item._id !== selectedCard._id),
+      );
+      closeActiveModal();
+    });
   };
 
   const handleAddClick = () => {
@@ -82,19 +78,14 @@ function App() {
   };
 
   useEffect(() => {
-    getWeather(coordinates, apiKey)
-      .then((data) => {
-        const filteredData = filterWeatherData(data);
-        setWeatherData(filteredData);
-      })
-      .catch(console.error);
+    getWeather(coordinates, apiKey).then((data) => {
+      const filteredData = filterWeatherData(data);
+      setWeatherData(filteredData);
+    });
 
-    getItems()
-      .then((data) => {
-        setClothingItems([...data].reverse());
-        console.log(data);
-      })
-      .catch(console.error);
+    getItems().then((data) => {
+      setClothingItems([...data].reverse());
+    });
   }, []);
 
   return (
@@ -126,6 +117,7 @@ function App() {
                 <Profile
                   handleCardClick={handleCardClick}
                   clothingItems={clothingItems}
+                  handleAddClick={handleAddClick}
                 />
               }
             />

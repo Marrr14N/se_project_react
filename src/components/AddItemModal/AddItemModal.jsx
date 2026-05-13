@@ -63,6 +63,7 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
             name="weatherType"
             value="hot"
             onChange={handleChange}
+            required
           />
           Hot
         </label>
