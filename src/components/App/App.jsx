@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 import Profile from "../Profile/Profile";
 import AddItemModal from "../AddItemModal/AddItemModal";
@@ -38,7 +37,7 @@ function App() {
     setSelectedCard(card);
   };
 
-  const onAddItem = (inputValues) => {
+  const onAddItem = (inputValues, handleReset) => {
     const newCardData = {
       _id: Date.now(),
       name: inputValues.name,
@@ -46,10 +45,13 @@ function App() {
       weather: inputValues.weatherType,
     };
 
-    addItem(newCardData).then((data) => {
-      setClothingItems((items) => [data, ...items]);
-      closeActiveModal();
-    });
+    addItem(newCardData)
+      .then((data) => {
+        setClothingItems((items) => [data, ...items]);
+        handleReset();
+        closeActiveModal();
+      })
+      .catch(console.error);
   };
 
   const handleDeleteItem = () => {
@@ -57,12 +59,14 @@ function App() {
   };
 
   const handleConfirmDelete = () => {
-    removeItem(selectedCard._id).then(() => {
-      setClothingItems((items) =>
-        items.filter((item) => item._id !== selectedCard._id),
-      );
-      closeActiveModal();
-    });
+    removeItem(selectedCard._id)
+      .then(() => {
+        setClothingItems((items) =>
+          items.filter((item) => item._id !== selectedCard._id),
+        );
+        closeActiveModal();
+      })
+      .catch(console.error);
   };
 
   const handleAddClick = () => {
@@ -78,14 +82,18 @@ function App() {
   };
 
   useEffect(() => {
-    getWeather(coordinates, apiKey).then((data) => {
-      const filteredData = filterWeatherData(data);
-      setWeatherData(filteredData);
-    });
+    getWeather(coordinates, apiKey)
+      .then((data) => {
+        const filteredData = filterWeatherData(data);
+        setWeatherData(filteredData);
+      })
+      .catch(console.error);
 
-    getItems().then((data) => {
-      setClothingItems([...data].reverse());
-    });
+    getItems()
+      .then((data) => {
+        setClothingItems([...data].reverse());
+      })
+      .catch(console.error);
   }, []);
 
   return (

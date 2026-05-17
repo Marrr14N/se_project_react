@@ -4,10 +4,10 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
   const defaultValues = { name: "", imageUrl: "", weatherType: "" };
-  const { values, handleChange } = useForm(defaultValues);
+  const { values, handleChange, handleReset } = useForm(defaultValues);
   function handleSubmit(evt) {
     evt.preventDefault();
-    onAddItem(values);
+    onAddItem(values, handleReset);
   }
 
   return (
@@ -63,6 +63,7 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
             name="weatherType"
             value="hot"
             onChange={handleChange}
+            checked={values.weatherType === "hot"}
             required
           />
           Hot
@@ -79,6 +80,7 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
             name="weatherType"
             value="warm"
             onChange={handleChange}
+            checked={values.weatherType === "warm"}
           />
           Warm
         </label>
@@ -94,6 +96,7 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
             name="weatherType"
             value="cold"
             onChange={handleChange}
+            checked={values.weatherType === "cold"}
           />
           Cold
         </label>
